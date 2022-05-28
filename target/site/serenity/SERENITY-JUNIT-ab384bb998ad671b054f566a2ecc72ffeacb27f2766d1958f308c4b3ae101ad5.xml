@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Prueba CRUD" skipped="0" tests="1" time="24.55" timestamp="2022-05-28 02:58:48"><testcase name="Leer"><failure message="El usuario no se actualizo correctamente - &#10;Expected: is &lt;true&gt;&#10;     but: was &lt;false&gt;" type="java.lang.AssertionError">El usuario no se actualizo correctamente - 
-Expected: is &lt;true&gt;
-     but: was &lt;false&gt;</failure><system-err>El usuario no se actualizo correctamente - 
-Expected: is &lt;true&gt;
-     but: was &lt;false&gt;&#13;
-certificacion.stepdefinitions.CorriendoPrueba.elDeberaVerAPedroPerez(CorriendoPrueba.java:68)&#13;
-✽.el debera ver a Pedro Perez(src/test/resources/features/crud_empleados.feature:27)&#13;
-</system-err></testcase></testsuite>

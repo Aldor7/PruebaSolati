@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Prueba CRUD" skipped="0" tests="4" time="18.81" timestamp="2022-05-28 03:56:35"><testcase name="Crear"/><testcase name="Actualizar"/><testcase name="Leer"/><testcase name="Borrar"/></testsuite>
