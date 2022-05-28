@@ -1,0 +1,49 @@
+group 'org.example'
+
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.0.56")
+    }
+}
+sourceCompatibility= 1.8
+targetCompatibility=1.8
+
+repositories {
+    mavenCentral()
+}
+
+ext{
+    serenityVersion = '2.0.56'
+    serenityCucumberVersion = '1.9.8'
+}
+
+dependencies {
+    testImplementation "io.github.bonigarcia:webdrivermanager:5.1.1"
+    testImplementation "net.serenity-bdd:serenity-core:$rootProject.ext.serenityVersion"
+    testImplementation "net.serenity-bdd:serenity-junit:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay-rest:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-cucumber:$rootProject.ext.serenityCucumberVersion"
+    implementation "com.fasterxml.jackson.core:jackson-annotations:2.10.3"
+
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.assertj:assertj-core:3.8.0'
+    testImplementation 'org.slf4j:slf4j-simple:1.7.21'
+}
+
+gradle.startParameter.continueOnFailure = true
+compileTestJava.options.encoding = "UTF-8"
+compileJava.options.encoding = 'UTF-8'
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}

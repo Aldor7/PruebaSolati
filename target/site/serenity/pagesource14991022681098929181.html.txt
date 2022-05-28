@@ -1,0 +1,144 @@
+<html lang="es"><head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Datos de empleados</title>
+
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style_nav.css" rel="stylesheet">
+
+	<style>
+		.content {
+			margin-top: 80px;
+		}
+	</style>
+
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand visible-xs-block visible-sm-block" href="">Inicio</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav ">
+					<li class="active"><a href="index.php">Lista de empleados</a></li>
+					<li><a href="add.php">Agregar datos</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+	</div>	</nav>
+	<div class="container">
+		<div class="content">
+			<h2>Lista de empleados</h2>
+			<hr>
+
+			
+			<form class="form-inline" method="get">
+				<div class="form-group">
+					<select name="filter" class="form-control" onchange="form.submit()">
+						<option value="0">Filtros de datos de empleados</option>
+												<option value="1">Fijo</option>
+						<option value="2">Contratado</option>
+                        <option value="3">Outsourcing</option>
+					</select>
+				</div>
+			</form>
+			<br>
+			<div class="table-responsive">
+			<table class="table table-striped table-hover">
+				<tbody><tr>
+                    <th>No</th>
+					<th>Código</th>
+					<th>Nombre</th>
+                    <th>Lugar de nacimiento</th>
+                    <th>Fecha de nacimiento</th>
+					<th>Teléfono</th>
+					<th>Cargo</th>
+					<th>Estado</th>
+                    <th>Acciones</th>
+				</tr>
+				
+						<tr>
+							<td>1</td>
+							<td>1250</td>
+							<td><a href="profile.php?nik=1250"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Juan Campos</a></td>
+                            <td>Santa Ana, El Salvador</td>
+                            <td>15-06-1991</td>
+							<td>70252525</td>
+                            <td>Gerente</td>
+							<td><span class="label label-info">Contratado</span>
+							</td>
+							<td>
+
+								<a href="edit.php?nik=1250" title="Editar datos" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
+								<a href="index.php?aksi=delete&amp;nik=1250" title="Eliminar" onclick="return confirm('Esta seguro de borrar los datos Juan Campos?')" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td>2</td>
+							<td>12509</td>
+							<td><a href="profile.php?nik=12509"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Andres Perez</a></td>
+                            <td>SM</td>
+                            <td>06-06-1980</td>
+							<td>12345789</td>
+                            <td>Gerente</td>
+							<td><span class="label label-warning">Outsourcing</span>
+							</td>
+							<td>
+
+								<a href="edit.php?nik=12509" title="Editar datos" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
+								<a href="index.php?aksi=delete&amp;nik=12509" title="Eliminar" onclick="return confirm('Esta seguro de borrar los datos Andres Perez?')" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td>3</td>
+							<td>1280</td>
+							<td><a href="profile.php?nik=1280"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Juan Pablo Perez</a></td>
+                            <td>Sabaneta</td>
+                            <td>11-05-2022</td>
+							<td>5302010</td>
+                            <td>Empleado</td>
+							<td><span class="label label-info">Contratado</span>
+							</td>
+							<td>
+
+								<a href="edit.php?nik=1280" title="Editar datos" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
+								<a href="index.php?aksi=delete&amp;nik=1280" title="Eliminar" onclick="return confirm('Esta seguro de borrar los datos Juan Pablo Perez?')" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td>4</td>
+							<td>15200</td>
+							<td><a href="profile.php?nik=15200"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Marcos Amaya</a></td>
+                            <td>Santa Salvador</td>
+                            <td>06-06-2017</td>
+							<td>12345678</td>
+                            <td>Vendedor</td>
+							<td><span class="label label-success">Fijo</span>
+							</td>
+							<td>
+
+								<a href="edit.php?nik=15200" title="Editar datos" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
+								<a href="index.php?aksi=delete&amp;nik=15200" title="Eliminar" onclick="return confirm('Esta seguro de borrar los datos Marcos Amaya?')" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+							</td>
+						</tr>
+									</tbody></table>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+
+</body></html>
